@@ -10,7 +10,15 @@ project_name:
         {% if not (project_name | regex_search('^[a-z][a-z0-9\-]+$')) %}
         project_name must start with a letter, followed one or more letters, digits or dashes all lowercase.
         {% endif %}
-        
+
+github_owner:
+    type: str
+    help: Whoe is the github owner of this project <>?
+    validator: >-
+        {% if not (github_owner | regex_search('^[a-z][a-z0-9\-]+$')) %}
+        github_owner must start with a letter, followed one or more letters, digits or dashes all lowercase.
+        {% endif %}
+
 project_slug:
     type: str
     help: A slug of the project name

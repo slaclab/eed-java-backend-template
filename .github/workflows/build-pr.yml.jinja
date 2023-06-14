@@ -11,6 +11,6 @@ concurrency:
   cancel-in-progress: true
 jobs:
     build:
-        uses: <repo>/<project>/.github/workflows/build.yml@main
+        uses: {{ github_owner }}/{{ project_name }}-deployment/.github/workflows/build-test.yml@main
         secrets: inherit
 
